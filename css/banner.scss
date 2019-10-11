@@ -1,0 +1,28 @@
+.banner{
+
+    img{
+        display: none;
+        width: 100%;
+        height: auto;
+        margin: 50px 0px;
+    
+        @media screen and (min-width: $break-medium) {
+            margin-top: 110px;
+        }
+    }
+
+    .banner__responsive{
+
+        @media screen and (min-width: $break-mobile + 1px) {
+            display: block;
+        }
+    }
+
+    .banner__mobile{
+
+        @media screen and (max-width: $break-mobile) {
+            display: block;
+        }
+    }
+
+} 

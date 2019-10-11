@@ -1,0 +1,51 @@
+$break-mobile: 425px;
+$break-tablet: 768px;
+$break-medium: 992px;
+$break-slider-1:600px;
+
+$font-medium:18px;
+$font-h3:14px;
+$font-h2:26px;
+
+$dec-yellow: #FFEA27;
+$dec-yellow-2: #FFBF1B;
+$dec-blue: #0081C3;
+$dec-blue-2: #006DA4;
+
+@import "../css/shelf.scss";
+@import "../css/banner.scss";
+@import "../css/slider.scss";
+@import "../css/checkbox.scss";
+@import "../css/info-form.scss";
+
+body{
+   text-align: center; 
+   font-family: 'Roboto Condensed', sans-serif;
+   max-width: 1440px;
+   margin: 0 auto 50px;
+
+   h2{
+    font-size: $font-h2;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin: 50px 0;
+    }
+}
+
+/*ONDE ESTARIA O MENU HEADER*/
+
+.menu-content{
+    width: 100%;
+    height: 50px;
+    display: block;
+    position: fixed;
+    background-color: #FAFAFA;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+
+    @media screen and (min-width: $break-medium) {
+        height: 110px;
+    }
+}

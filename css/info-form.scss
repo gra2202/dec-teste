@@ -1,0 +1,137 @@
+.info__client{
+    margin: 5% 5%;
+    text-align: left;
+    text-transform: uppercase;
+
+    .info__gender{
+        display: block;
+        margin: 10px 0 15px;
+
+        span{
+            display: block;
+            margin: 0 0 10px;
+        }
+
+        label{
+            display: inline-block;
+            position: relative;
+            width: 30%;
+            height: 25px;
+            text-align: left;
+            padding-left: 25px;
+
+            @media screen and(min-width:$break-medium) {
+                width: 12%;
+            }
+
+            input{
+                position: absolute;
+                opacity: 0;
+                height: 20px;
+                width: 100px;
+                left: 0px;
+                z-index: 99;
+                top: -5px;
+    
+                &:checked  ~ .checkmark{               
+                    &:after{
+                        display: block;
+                    }                
+                }
+            }
+
+            .checkmark {
+                position: absolute;
+                left: 0px;
+                height: 15px;
+                width: 15px;
+                background-color: #fff;
+                border: 2px solid $dec-blue;
+                border-radius: 50%;
+                cursor: pointer;
+                top: -2px;                
+    
+                &:after {
+                    content: "";
+                    position: absolute;
+                    display: none;
+                    left: 2.75px;
+                    top: 2.75px;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: $dec-blue;
+                }
+            }
+        }        
+    }
+
+    .info__names,
+    .info__personal{
+        display: inline-block;
+        width: 100%;
+
+        @media screen and(min-width:$break-tablet) {
+            width: 48%;
+        }
+
+        label{
+            display: block;
+        }
+
+        input{
+            height: 40px;
+            width: 95%;
+            border: 1px solid lightgray;
+            margin: 10px 0 20px;
+        }
+
+
+        .info__personal--cpf,
+        .info__personal--birthday{
+        width: 47%;
+        display: inline-block;
+        margin-right: 5px;
+        }
+    }    
+}
+
+button[type="submit"]{
+    display: block;
+    margin: 25px auto;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: $dec-blue;
+    padding: 10px 0;
+    width: 40%;
+    max-width: 220px;
+    font-weight: bolder;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    border-radius: 3px;
+
+    &:after{
+        content: "";
+        width: 8px;
+        height: 8px;
+        margin-left: 26px;
+        border-bottom: 1px solid white;
+        border-right: 1px solid white;
+        display: inline-block;
+        transform: rotate(-45deg) translate(-1px,-2px);
+    }
+
+    &:before{
+        content: "";
+        background-color: $dec-blue-2;
+        width: 48px;
+        height: 10px;
+        position: absolute;
+        right: -1px;
+        bottom: -5px;
+        transform: rotate(-10deg);    
+    }
+    
+}

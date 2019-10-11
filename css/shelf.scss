@@ -1,0 +1,126 @@
+.shelf__product{
+
+    img{
+        width: 100%;
+        height: auto;
+        max-width: 280px;
+        margin: 10px 5px;
+    }
+
+    h3{
+        font-size: $font-h3;
+        margin: 15px 60px;
+    }
+
+    .price{
+        display: block;
+        font-size: $font-medium;
+        margin: 5px auto;
+        background-color: $dec-yellow;
+        padding: 5px 10px;
+        font-weight: bold;
+        width: 100px;
+    }
+
+    .parcel{
+        display: block;
+        font-size: $font-h3;
+        color: #b3b3b3;
+    }
+
+    a{
+        display: block;
+        margin: 25px auto;
+        color: black;
+        text-decoration: none;
+        text-transform: uppercase;
+        background-color: $dec-yellow;
+        padding: 10px 0;
+        width: 50%;
+        font-weight: bolder;
+        position: relative;
+        overflow: hidden;
+        border-radius: 3px;
+
+        &:after{
+            content: "";
+            width: 8px;
+            height: 8px;
+            margin-left: 26px;
+            border-bottom: 1px solid black;
+            border-right: 1px solid black;
+            display: inline-block;
+            transform: rotate(-45deg) translate(-1px,-2px);
+        }
+
+        &:before{
+            content: "";
+            background-color: $dec-yellow-2;
+            width: 48px;
+            height: 10px;
+            position: absolute;
+            right: -1px;
+            bottom: -5px;
+            transform: rotate(-10deg);    
+        }
+    }
+
+    .shelf__product--checkbox{
+        display: block;
+        position: relative;
+        margin: 10px auto;
+        user-select: none;
+        width: 60%;
+        height: 30px;
+        
+        input{
+            position: absolute;
+            opacity: 0;
+            height: 30px;
+            width: 100%;
+            top: -10px;
+            left: 0;
+            z-index: 99;
+
+            &:checked  ~ .checkmark{               
+                &:after{
+                    display: block;
+                }                
+            }
+        }
+
+        .checkmark {
+            position: absolute;
+            top: -25%;
+            left: 15%;
+            height: 26px;
+            width: 26px;
+            background-color: #fff;
+            border: 2px solid $dec-blue;
+            cursor: pointer;
+
+            @media screen and (min-width:$break-slider-1) {
+                left: 7.5%;
+            }
+
+            &:after {
+            content: "";
+            position: absolute;
+            display: none;
+            left: 8px;
+            top: 1px;
+            width: 8px;
+            height: 17px;
+            border: solid $dec-blue;
+            border-width: 0 3px 3px 0;
+            transform: rotate(45deg);
+            }           
+        }
+
+        label{
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: bolder;
+        }
+    }
+}

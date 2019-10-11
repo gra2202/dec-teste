@@ -1,0 +1,87 @@
+.sports{
+
+    margin: 0 15%;
+
+    .sport__selects{
+        text-align: left;
+        margin: 20px 25px;
+        position: relative;
+        display: flex;
+        height: auto;
+        flex-direction: column;
+        flex-wrap: wrap;
+        
+
+        @media screen and (min-width:$break-slider-1) {
+            max-height: 750px;
+        }
+
+        @media screen and (min-width:$break-medium) {
+            max-height: 500px;
+        }
+
+
+
+        label{
+            font-size: 16px;
+            text-transform: uppercase;
+            display: flex;
+            margin: 7px 0;
+            position: relative;
+            width: 100%;
+            padding-right: 30px;
+
+            @media screen and (min-width:$break-slider-1) {
+                width: 50%;
+            }
+    
+            @media screen and (min-width:$break-medium) {
+                width: 35%;
+            }
+
+            input{
+                position: absolute;
+                opacity: 0;
+                height: 20px;
+                width: 250px;
+                left: -30px;
+                z-index: 99;
+                top: -5px;
+    
+                &:checked  ~ .checkmark{               
+                    &:after{
+                        display: block;
+                    }                
+                }
+            }
+    
+            .checkmark {
+                position: absolute;
+                left: -30px;
+                height: 20px;
+                width: 20px;
+                background-color: #fff;
+                border: 2px solid $dec-blue;
+                cursor: pointer;
+                top: -5px;
+    
+                @media screen and (min-width:$break-slider-1) {
+    
+                }
+    
+                &:after {
+                    content: "";
+                    position: absolute;
+                    display: none;
+                    left: 7px;
+                    top: 1px;
+                    width: 4px;
+                    height: 13px;
+                    border: solid $dec-blue;
+                    border-width: 0 3px 3px 0;
+                    transform: rotate(45deg);
+                }           
+            }
+        }
+    }
+}
